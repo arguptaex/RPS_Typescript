@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/scoreboard.css">
+    <title>3-Column Table</title>
+    
+</head>
+<body>
+
+    <h2>Leaderboard [ TOP 10 ]</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Player Name</th>
+                <th>Score</th>
+                <th>Rounds Played</th>
+            </tr>
+        </thead>
+        <tbody> 
+            {% for player in leaders %}
+            <tr>
+                <td>{{player.name}}</td>
+                <td>{{player.score}}</td>
+                <td>{{player.rounds_played}}</td>
+            </tr>
+            {% endfor %}
+           
+        </tbody>
+    </table>
+
+    <div class="goBack">
+
+        
+        <a href="/">Let's Play</a>
+    </div>
+
+</body>
+</html>

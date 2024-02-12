@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    background-image: url('../images/arena.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+body, h2, h4, p, form {
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    
+    
+    margin: 50px auto;
+    /* background-color: #14071e; */
+    
+    background-image: url('../images/poki_banner.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #190c0c;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1,h4{
+    margin: 2px;
+    border-radius: 20px;
+    
+  background-color: rgba(0, 0, 0, 0.5); /* 0.5 represents the alpha value for transparency */
+  color: white; /* Set text color to contrast with the background */
+  padding: 10px; /* Add some padding for better readability */
+}
+
+
+
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.choice-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.choice-buttons form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.choice-buttons form button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: medium;
+}
+
+.choice-buttons button {
+    
+    color: #fff;
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.fire-button{
+    background-color: rgb(189, 102, 30);
+}
+.water-button{
+    background-color: rgb(20, 159, 224);
+}
+.grass-button{
+    background-color: rgb(10, 216, 65);
+}
+
+.choice-buttons button:hover {
+    background-color: #2980b9;
+}
+
+.screen {
+    height: 80px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.curr-scorecard {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.scoreboard {
+    text-align: center;
+}
+
+
+
+button {
+    background-color: #3498db;
+    width: 100px;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.exit-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exit-form button{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(167, 56, 56);
+    color: #fff;
+}
