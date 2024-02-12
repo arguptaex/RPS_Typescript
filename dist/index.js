@@ -1,13 +1,16 @@
 console.log("hello rps");
-function rpsGame(round_no, scoreboard, player_move) {
+function rpsGame(
+    //   round_no: number,
+    //   scoreboard,
+    player_move) {
     let playerScore;
     let compScore;
     let result;
-    let moves = ['fire', 'water', 'grass'];
+    let moves = ["fire", "water", "grass"];
     let options = {
-        "fire": "grass",
-        "grass": "water",
-        "water": "fire"
+        fire: "grass",
+        grass: "water",
+        water: "fire",
     };
     let compMove = "fire";
     if (player_move == compMove) {
@@ -22,15 +25,13 @@ function rpsGame(round_no, scoreboard, player_move) {
         result = "You Loose";
         console.log("You Loose");
     }
-    return [playerScore, compScore, result];
+    return result;
 }
-;
-function startGame() {
-    // Get player name input value
-    const playerNameInput = document.getElementById("player_name");
-    const playerName = playerNameInput.value;
-    console.log(playerNameInput.value);
-    // Redirect to another page passing player name as query parameter
-    window.location.href = `/gameplay.html`;
-    // window.location.href = "wwww.google.com"
+
+function handleClick(move) {
+    const screen = document.getElementById("screen");
+    if (screen) {
+        console.log("check");
+        screen.innerText = rpsGame(move);
+    }
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/gameplay.css">
+    <!-- <link rel="stylesheet" href="css/gameplay.css"> -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <title>fire-water-Scissor Game</title>
     <script src="https://kit.fontawesome.com/27621ffbc9.js" crossorigin="anonymous"></script>
@@ -24,39 +24,30 @@
 
         <div class="choice-buttons">
 
-            <form method="post" action="">
-                {% csrf_token %}
-                <button class="fire-button" type="submit" name="fire"><span>Fire</span> <i class="fa-solid fa-fire-flame-curved"></i></i></button>
-                <button class="water-button" type="submit" name="water"><span>Water</span><i class="fa-solid fa-water"></i></button>
-                <button class="grass-button" type="submit" name="grass"><span>Grass</span><i class="fa-solid fa-tree"></i></button>
-            </form>
+            <!-- <form > -->
+               
+                <button class="fire-button" type="button" " onclick="handleClick('fire')"><span>Fire</span> <i class="fa-solid fa-fire-flame-curved"></i></i></button>
+                <button class="water-button" type="button" name="water" onclick="handleClick('water')"><span>Water</span><i class="fa-solid fa-water"></i></button>
+                <button class="grass-button" type="button" name="grass" onclick="handleClick('grass')"><span>Grass</span><i class="fa-solid fa-tree"></i></button>
+            <!-- </form> -->
         </div>
-        <div class="screen">
-            <h2>Round No. {{round_no}}</h2>
-
-
-            {% if result_str == "" %}
-
-            <p> Choose Your Pokemon type !! </p>
-
-            {% else %}
-
-            <p>Computer chose : {{comp_move}}</p>
-            <p>{{result_str}}</p>
-
-            {% endif %}
+        <div class="screen" id="screen">
+           
+            
         </div>
-        <div class="curr-scorecard">
+        <!-- <div class="curr-scorecard">
             <h3>Your Score : {{curr_score}}</h4>
         </div>
 
-        <form class="exit-form" method="post" action="">
-            {% csrf_token %}
+        <form class="exit-form" >
+            
 
             <button type="submit" name="exit">Exit</button>
 
-        </form>
+        </form> -->
     </div>
+
+    <script src="dist/index.js"></script>
 
 
 
