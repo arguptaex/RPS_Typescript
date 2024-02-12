@@ -12,7 +12,8 @@ function rpsGame(
         grass: "water",
         water: "fire",
     };
-    let compMove = "fire";
+    let randomIndex = Math.floor(Math.random() * moves.length);
+    let compMove = moves[randomIndex];
     if (player_move == compMove) {
         result = "Its a Tie; Try again !";
         console.log("Its a Tie; Try again !");
@@ -27,7 +28,6 @@ function rpsGame(
     }
     return result;
 }
-
 function handleClick(move) {
     const screen = document.getElementById("screen");
     if (screen) {

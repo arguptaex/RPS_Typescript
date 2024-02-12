@@ -15,7 +15,8 @@ function rpsGame(
     water: "fire",
   };
 
-  let compMove: string = "fire";
+  let randomIndex = Math.floor(Math.random() * moves.length);
+  let compMove: string = moves[randomIndex];
 
   if (player_move == compMove) {
     result = "Its a Tie; Try again !";
